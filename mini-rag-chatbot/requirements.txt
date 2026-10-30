@@ -1,4 +1,6 @@
+streamlit
 google-genai
-python-dotenv
-numpy
 faiss-cpu
+numpy
+python-dotenv
+pymupdf
