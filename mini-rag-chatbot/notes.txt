@@ -1,0 +1,15 @@
+RAG stands for Retrieval-Augmented Generation. It combines information retrieval with a language model to produce answers grounded in supplied documents.
+
+An embedding is a list of numbers representing the semantic meaning of text. Texts with similar meanings often have vectors that point in similar directions.
+
+Chunking means splitting a large document into smaller pieces. Good chunks preserve useful context and are small enough to retrieve precisely.
+
+FAISS is a library for efficient similarity search over dense vectors. This project uses IndexFlatIP with L2-normalized vectors. Inner product between normalized vectors is equivalent to cosine similarity.
+
+A RAG pipeline commonly has five stages: load documents, split documents into chunks, embed the chunks, retrieve relevant chunks for a user query, and generate an answer using the retrieved context.
+
+A vector database does not itself generate natural-language answers. It finds similar vectors. The language model generates the final answer using the retrieved text.
+
+RAG can reduce unsupported answers when the prompt instructs the model to use retrieved context, but it does not guarantee perfect accuracy. Retrieval quality depends on document quality, chunking, embeddings, and search settings.
+
+This mini project uses Gemini for embeddings and answer generation, FAISS for vector similarity search, Python for the pipeline, and python-dotenv for loading the API key from a local .env file.
